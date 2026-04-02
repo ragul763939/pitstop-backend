@@ -1,0 +1,16 @@
+{
+  "name": "pitstop-backend",
+  "version": "1.0.0",
+  "description": "PitStop API - Fuel & Mechanic On Demand",
+  "main": "server.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.18.2",
+    "cors": "2.8.5"
+  }
+}
