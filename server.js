@@ -3,7 +3,7 @@ const express  = require('express');
 const cors     = require('cors');
 const http     = require('http');
 const crypto   = require('crypto');
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer').default || require('nodemailer');
 
 const app    = express();
 const server = http.createServer(app);
@@ -16,7 +16,7 @@ app.use(express.json());
 const OTP_STORE = {};
 
 // ── Email transporter (Gmail SMTP — free) ──────────
-const transporter = nodemailer.createTransporter({
+const transport = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.GMAIL_USER,   // your gmail
